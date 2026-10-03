@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Verbal Ability Tracker | Infosys SE</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+
+  <header class="navbar">
+
+    <div class="nav-left">
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <a href="#dashboard" class="logo">
+        <span class="logo-icon">
+          <i class="fa-solid fa-book-open"></i>
+        </span>
+
+        <span>
+          Verbal<span class="logo-highlight">Track</span>
+        </span>
+      </a>
+     
+
+    </div>
+
+    <nav class="nav-links" id="navLinks">
+
+      <a href="#dashboard" class="nav-link active">
+        <i class="fa-solid fa-chart-line"></i>
+        Dashboard
+      </a>
+
+      <a href="#grammar" class="nav-link">
+        <i class="fa-solid fa-spell-check"></i>
+        Grammar
+      </a>
+       <a href="#prepositions" class="nav-link">
+  <i class="fa-solid fa-location-arrow"></i>
+  Prepositions
+</a>
+<a href="#tenses" class="nav-link">
+  <i class="fa-solid fa-clock"></i>
+  Tenses
+</a>
+
+      <a href="#vocabulary" class="nav-link">
+        <i class="fa-solid fa-language"></i>
+        Vocabulary
+      </a>
+
+     
+
+      <a href="#para-jumbles" class="nav-link">
+        <i class="fa-solid fa-list-ol"></i>
+        Para Jumbles
+      </a>
+
+      
+
+    </nav>
+
+    <div class="nav-actions">
+
+      <button class="icon-btn" id="themeToggle" title="Toggle theme">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+
+      <button class="icon-btn" id="resetBtn" title="Reset progress">
+        <i class="fa-solid fa-rotate-right"></i>
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <!-- ================= MOBILE SIDEBAR ================= -->
+
+  <aside class="mobile-sidebar" id="mobileSidebar">
+
+    <div class="sidebar-header">
+      <h3>Verbal Topics</h3>
+
+      <button id="closeSidebar">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <a href="#dashboard">Dashboard</a>
+    <a href="#grammar">Grammar</a>
+    <a href="#prepositions">
+  Prepositions
+</a>
+<a href="#tenses">
+  <i class="fa-solid fa-clock"></i>
+  Tenses
+</a>
+    <a href="#vocabulary">Vocabulary</a>
+    <a href="#reading">Reading Comprehension</a>
+    <a href="#para-jumbles">Para Jumbles</a>
+    <a href="#sentence-completion">Sentence Completion</a>
+    <a href="#error-detection">Error Detection</a>
+    <a href="#synonyms">Synonyms & Antonyms</a>
+    <a href="#practice">Practice Tests</a>
+
+  </aside>
+
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="dashboard">
+
+      <div class="hero-content">
+
+        <div class="badge">
+          <i class="fa-solid fa-bolt"></i>
+          Infosys System Engineer Preparation
+        </div>
+
+        <h1>
+          Master Verbal Ability
+          <span>Step by Step.</span>
+        </h1>
+
+        <p>
+          Track your grammar rules, vocabulary, reading skills and
+          placement-level verbal practice from one dashboard.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#grammar" class="primary-btn">
+            Start Learning
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <button class="secondary-btn" id="continueBtn">
+            <i class="fa-solid fa-play"></i>
+            Continue Progress
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="hero-card">
+
+        <div class="hero-card-top">
+
+          <span>Overall Progress</span>
+
+          <strong id="heroProgress">0%</strong>
+
+        </div>
+
+        <div class="progress-track large">
+          <div class="progress-fill" id="heroProgressBar"></div>
+        </div>
+
+        <div class="hero-stats">
+
+          <div>
+            <strong id="completedRules">0</strong>
+            <span>Completed</span>
+          </div>
+
+          <div>
+            <strong>40</strong>
+            <span>Total Rules</span>
+          </div>
+
+          <div>
+            <strong id="remainingRules">40</strong>
+            <span>Remaining</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= DASHBOARD STATS ================= -->
+
+    <section class="stats-section">
+
+      <div class="stat-card">
+
+        <div class="stat-icon blue">
+          <i class="fa-solid fa-book"></i>
+        </div>
+
+        <div>
+          <span>Total Rules</span>
+          <strong>40</strong>
+        </div>
+
+      </div>
+
+
+      <div class="stat-card">
+
+        <div class="stat-icon green">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+
+        <div>
+          <span>Completed</span>
+          <strong id="statCompleted">0</strong>
+        </div>
+
+      </div>
+
+
+      <div class="stat-card">
+
+        <div class="stat-icon yellow">
+          <i class="fa-solid fa-star"></i>
+        </div>
+
+        <div>
+          <span>Important</span>
+          <strong>15</strong>
+        </div>
+
+      </div>
+
+
+      <div class="stat-card">
+
+        <div class="stat-icon purple">
+          <i class="fa-solid fa-fire"></i>
+        </div>
+
+        <div>
+          <span>Current Streak</span>
+          <strong id="streak">0</strong>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= GRAMMAR ================= -->
+
+    <section class="content-section" id="grammar">
+
+      <div class="section-heading">
+
+        <div>
+          <div class="section-label">
+            <i class="fa-solid fa-spell-check"></i>
+            Grammar
+          </div>
+
+          <h2>Subject–Verb Agreement</h2>
+
+          <p>
+            Master the rules most commonly tested in placement-level
+            English grammar questions.
+          </p>
+        </div>
+
+        <div class="section-progress">
+
+          <span id="sectionProgressText">
+            0 / 40 completed
+          </span>
+
+          <div class="progress-track">
+            <div
+              class="progress-fill"
+              id="sectionProgressBar"
+            ></div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- ================= TOOLBAR ================= -->
+
+      <div class="toolbar">
+
+        <div class="search-box">
+
+          <i class="fa-solid fa-magnifying-glass"></i>
+
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search rules..."
+          />
+
+        </div>
+
+
+        <select id="categoryFilter">
+
+          <option value="all">All Categories</option>
+          <option value="basic">Basic Rules</option>
+          <option value="pronoun">Pronouns</option>
+          <option value="compound">Compound Subjects</option>
+          <option value="quantity">Quantity & Numbers</option>
+          <option value="noun">Special Nouns</option>
+          <option value="phrase">Phrases</option>
+          <option value="advanced">Advanced</option>
+
+        </select>
+
+
+        <button class="filter-btn" id="showCompletedBtn">
+          <i class="fa-solid fa-check"></i>
+          Completed
+        </button>
+
+      </div>
+
+
+      <!-- ================= RULE CARDS ================= -->
+
+      <div class="rules-grid" id="rulesContainer"></div>
+
+    </section>
+
+    <section class="content-section" id="prepositions">
+
+  <div class="section-heading">
+
+    <div>
+      <div class="section-label">
+        <i class="fa-solid fa-location-arrow"></i>
+        Grammar
+      </div>
+
+      <h2>Prepositions</h2>
+
+      <p>
+        Master preposition rules, fixed prepositions,
+        time/place usage and common placement-exam traps.
+      </p>
+    </div>
+
+    <div class="section-progress">
+
+      <span id="prepositionProgressText">
+        0 / 40 completed
+      </span>
+
+      <div class="progress-track">
+        <div
+          class="progress-fill"
+          id="prepositionProgressBar"
+        ></div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="toolbar">
+
+    <div class="search-box">
+
+      <i class="fa-solid fa-magnifying-glass"></i>
+
+      <input
+        type="text"
+        id="prepositionSearch"
+        placeholder="Search preposition rules..."
+      />
+
+    </div>
+
+
+    <select id="prepositionCategory">
+
+      <option value="all">All Categories</option>
+
+      <option value="time">
+        Time
+      </option>
+
+      <option value="place">
+        Place & Direction
+      </option>
+
+      <option value="comparison">
+        Comparison & Position
+      </option>
+
+      <option value="fixed">
+        Fixed Prepositions
+      </option>
+
+      <option value="common">
+        Common Errors
+      </option>
+
+    </select>
+
+
+    <button
+      class="filter-btn"
+      id="prepositionCompletedBtn"
+    >
+      <i class="fa-solid fa-check"></i>
+      Completed
+    </button>
+
+  </div>
+
+
+  <div
+    class="rules-grid"
+    id="prepositionsContainer"
+  ></div>
+
+</section>
+
+<!-- ================= TENSES ================= -->
+<section id="tenses" class="topic-section">
+
+  <div class="section-header">
+    <div>
+      <span class="section-badge">GRAMMAR</span>
+      <h2>Tenses</h2>
+      <p>
+        Infosys System Engineer focused tense rules for MCQs,
+        fill-in-the-blanks and error detection.
+      </p>
+    </div>
+
+    <div class="section-progress">
+      <span id="tenseProgressText">0 / 40 completed</span>
+      <div class="progress-bar">
+        <div id="tenseProgressBar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search + Filters -->
+  <div class="rule-controls">
+
+    <div class="search-box">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input
+        type="text"
+        id="tenseSearch"
+        placeholder="Search tense rules..."
+      />
+    </div>
+
+    <select id="tenseCategory">
+      <option value="all">All Categories</option>
+      <option value="present">Present Tense</option>
+      <option value="past">Past Tense</option>
+      <option value="future">Future Tense</option>
+      <option value="time-clause">Time Clauses</option>
+      <option value="conditional">Conditionals</option>
+      <option value="error">Error Detection</option>
+      <option value="advanced">Advanced</option>
+    </select>
+
+    <button id="tenseCompletedBtn" class="filter-btn">
+      <i class="fa-solid fa-check"></i>
+      Completed
+    </button>
+
+  </div>
+
+  <!-- Tense Rules -->
+  <div id="tensesContainer" class="rules-grid"></div>
+
+</section>
+    <!-- ================= VOCABULARY ================= -->
+
+    <section class="placeholder-section" id="vocabulary">
+
+      <div class="placeholder-icon">
+        <i class="fa-solid fa-language"></i>
+      </div>
+
+      <h2>Vocabulary Tracker</h2>
+
+      <p>
+        Synonyms, antonyms, contextual vocabulary,
+        idioms and important placement words.
+      </p>
+
+      <div class="coming-badge">
+        Coming Next
+      </div>
+
+    </section>
+
+
+    <!-- ================= READING ================= -->
+
+    <section class="placeholder-section" id="reading">
+
+      <div class="placeholder-icon">
+        <i class="fa-solid fa-book-reader"></i>
+      </div>
+
+      <h2>Reading Comprehension</h2>
+
+      <p>
+        Practice passages, inference questions,
+        tone, main idea and vocabulary-in-context.
+      </p>
+
+      <div class="coming-badge">
+        Coming Next
+      </div>
+
+    </section>
+
+
+    <!-- ================= PARA JUMBLES ================= -->
+
+    <section class="placeholder-section" id="para-jumbles">
+
+      <div class="placeholder-icon">
+        <i class="fa-solid fa-list-ol"></i>
+      </div>
+
+      <h2>Para Jumbles</h2>
+
+      <p>
+        Sentence ordering, opening sentence,
+        mandatory pairs and logical flow.
+      </p>
+
+      <div class="coming-badge">
+        Coming Next
+      </div>
+
+    </section>
+
+
+    <!-- ================= SENTENCE COMPLETION ================= -->
+
+    <section class="placeholder-section" id="sentence-completion">
+
+      <div class="placeholder-icon">
+        <i class="fa-solid fa-pen"></i>
+      </div>
+
+      <h2>Sentence Completion</h2>
+
+      <p>
+        Context-based grammar and vocabulary
+        questions for placement exams.
+      </p>
+
+      <div class="coming-badge">
+        Coming Next
+      </div>
+
+    </section>
+
+
+    <!-- ================= ERROR DETECTION ================= -->
+
+    <section class="placeholder-section" id="error-detection">
+
+      <div class="placeholder-icon">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+      </div>
+
+      <h2>Error Detection</h2>
+
+      <p>
+        Identify grammatical errors involving
+        agreement, tense, articles, prepositions and more.
+      </p>
+
+      <div class="coming-badge">
+        Coming Next
+      </div>
+
+    </section>
+
+
+    <!-- ================= SYNONYMS ================= -->
+
+    <section class="placeholder-section" id="synonyms">
+
+      <div class="placeholder-icon">
+        <i class="fa-solid fa-arrows-left-right"></i>
+      </div>
+
+      <h2>Synonyms & Antonyms</h2>
+
+      <p>
+        Build your placement vocabulary through
+        high-frequency synonym and antonym practice.
+      </p>
+
+      <div class="coming-badge">
+        Coming Next
+      </div>
+
+    </section>
+
+
+    <!-- ================= PRACTICE ================= -->
+
+    <section class="placeholder-section" id="practice">
+
+      <div class="placeholder-icon">
+        <i class="fa-solid fa-laptop-code"></i>
+      </div>
+
+      <h2>Verbal Practice Tests</h2>
+
+      <p>
+        Take timed Infosys-style verbal ability
+        mock tests and track your performance.
+      </p>
+
+      <div class="coming-badge">
+        Coming Next
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= BACK TO TOP ================= -->
+
+  <button class="back-top" id="backTop">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+  </button>
+
+
+  <!-- ================= TOAST ================= -->
+
+  <div class="toast" id="toast">
+
+    <i class="fa-solid fa-circle-check"></i>
+
+    <span id="toastText">
+      Progress saved
+    </span>
+
+  </div>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
