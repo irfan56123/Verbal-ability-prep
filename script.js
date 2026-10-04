@@ -1481,6 +1481,510 @@ const tenseRules = [
 
 ];
 
+// =====================================================
+// ARTICLES — INFOSYS SYSTEM ENGINEER
+// =====================================================
+
+const articleRules = [
+
+  // ================= A / AN =================
+
+  {
+    id: 1,
+    category: "a-an",
+    title: "Singular Countable Noun + Consonant Sound → A",
+    description:
+      "A is used before a singular countable noun beginning with a consonant sound.",
+    example:
+      "He is a student.",
+    trap:
+      "Sound important hai, sirf spelling nahi."
+  },
+
+  {
+    id: 2,
+    category: "a-an",
+    title: "Vowel Sound → AN",
+    description:
+      "An is used before a singular countable noun beginning with a vowel sound.",
+    example:
+      "He is an engineer.",
+    trap:
+      "Vowel letter nahi, vowel sound check karo."
+  },
+
+  {
+    id: 3,
+    category: "a-an",
+    title: "University → A",
+    description:
+      "University starts with the sound 'yu', which is a consonant sound.",
+    example:
+      "She is a university student.",
+    trap:
+      "❌ an university"
+  },
+
+  {
+    id: 4,
+    category: "a-an",
+    title: "European → A",
+    description:
+      "European starts with the consonant sound 'yu'.",
+    example:
+      "He is a European citizen.",
+    trap:
+      "❌ an European"
+  },
+
+  {
+    id: 5,
+    category: "a-an",
+    title: "Silent H → AN",
+    description:
+      "Use an when H is silent and the following sound is a vowel sound.",
+    example:
+      "He is an honest man.",
+    trap:
+      "honest → 'onest' sound."
+  },
+
+  {
+    id: 6,
+    category: "a-an",
+    title: "Pronounced H → A",
+    description:
+      "Use a when H is pronounced with a consonant sound.",
+    example:
+      "He lives in a house.",
+    trap:
+      "house, hotel, historical → generally a."
+  },
+
+  {
+    id: 7,
+    category: "a-an",
+    title: "Vowel-Sound Abbreviation → AN",
+    description:
+      "Use an when an abbreviation begins with a vowel sound.",
+    example:
+      "He is an MBA graduate.",
+    trap:
+      "MBA is pronounced 'em-bi-e'."
+  },
+
+  {
+    id: 8,
+    category: "a-an",
+    title: "Consonant-Sound Abbreviation → A",
+    description:
+      "Use a when an abbreviation begins with a consonant sound.",
+    example:
+      "He is a UPSC aspirant.",
+    trap:
+      "UPSC begins with the sound 'yu'."
+  },
+
+
+  // ================= THE =================
+
+  {
+    id: 9,
+    category: "the",
+    title: "Specific / Known Noun → THE",
+    description:
+      "Use the when the noun is specific or already known to the listener.",
+    example:
+      "I saw a dog. The dog was black.",
+    trap:
+      "First mention → a/an; known noun → the."
+  },
+
+  {
+    id: 10,
+    category: "the",
+    title: "Unique Things → THE",
+    description:
+      "Unique objects and things generally take the.",
+    example:
+      "The Sun rises in the east.",
+    trap:
+      "the Sun, the Moon, the Earth."
+  },
+
+  {
+    id: 11,
+    category: "the",
+    title: "Superlative Degree → THE",
+    description:
+      "Superlative adjectives normally take the.",
+    example:
+      "He is the best player.",
+    trap:
+      "❌ He is a best player."
+  },
+
+  {
+    id: 12,
+    category: "the",
+    title: "Ordinal Number → THE",
+    description:
+      "Ordinal numbers generally take the.",
+    example:
+      "Read the first chapter.",
+    trap:
+      "the first, the second, the third."
+  },
+
+  {
+    id: 13,
+    category: "the",
+    title: "Repeated Mention → THE",
+    description:
+      "A noun already introduced can take the when referring to the same specific noun.",
+    example:
+      "I bought a book. The book is interesting.",
+    trap:
+      "Second reference is specific."
+  },
+
+  {
+    id: 14,
+    category: "the",
+    title: "The Same",
+    description:
+      "The fixed expression is 'the same'.",
+    example:
+      "This is the same book.",
+    trap:
+      "❌ This is a same book."
+  },
+
+  {
+    id: 15,
+    category: "the",
+    title: "The Only",
+    description:
+      "Only generally takes the when referring to one particular person or thing.",
+    example:
+      "He is the only candidate who qualified.",
+    trap:
+      "the only + noun."
+  },
+
+  {
+    id: 16,
+    category: "the",
+    title: "The + Adjective → Class / Group",
+    description:
+      "The + adjective can represent an entire class of people.",
+    example:
+      "The rich should help the poor.",
+    trap:
+      "rich/poor here represent groups."
+  },
+
+
+  // ================= GEOGRAPHY =================
+
+  {
+    id: 17,
+    category: "geography",
+    title: "Rivers → THE",
+    description:
+      "Names of rivers normally take the.",
+    example:
+      "The Ganga is a major river.",
+    trap:
+      "River names commonly use the."
+  },
+
+  {
+    id: 18,
+    category: "geography",
+    title: "Seas and Oceans → THE",
+    description:
+      "Names of seas and oceans take the.",
+    example:
+      "The Indian Ocean is vast.",
+    trap:
+      "the Indian Ocean, the Arabian Sea."
+  },
+
+  {
+    id: 19,
+    category: "geography",
+    title: "Mountain Ranges → THE",
+    description:
+      "Mountain ranges take the.",
+    example:
+      "The Himalayas are beautiful.",
+    trap:
+      "Range/group → the."
+  },
+
+  {
+    id: 20,
+    category: "geography",
+    title: "Individual Mountain → Usually No THE",
+    description:
+      "Individual mountain names normally do not take the.",
+    example:
+      "Mount Everest is the highest peak.",
+    trap:
+      "❌ the Mount Everest"
+  },
+
+  {
+    id: 21,
+    category: "geography",
+    title: "Deserts → THE",
+    description:
+      "Names of deserts normally take the.",
+    example:
+      "The Sahara Desert is huge.",
+    trap:
+      "Desert names → the."
+  },
+
+  {
+    id: 22,
+    category: "geography",
+    title: "Groups of Islands → THE",
+    description:
+      "Names referring to groups of islands generally take the.",
+    example:
+      "The Andaman and Nicobar Islands are beautiful.",
+    trap:
+      "Group of islands → the."
+  },
+
+  {
+    id: 23,
+    category: "geography",
+    title: "Plural / Group Country Names → THE",
+    description:
+      "Countries with plural or descriptive group names commonly take the.",
+    example:
+      "The United States is a developed country.",
+    trap:
+      "the United States, the United Kingdom, the Netherlands."
+  },
+
+
+  // ================= ZERO ARTICLE =================
+
+  {
+    id: 24,
+    category: "zero",
+    title: "Proper Names → Usually No Article",
+    description:
+      "Names of people, cities and many countries normally do not require an article.",
+    example:
+      "India is a large country.",
+    trap:
+      "❌ The India / ❌ The Delhi."
+  },
+
+  {
+    id: 25,
+    category: "zero",
+    title: "Languages → No Article",
+    description:
+      "Languages generally do not take an article when used generally.",
+    example:
+      "I speak English.",
+    trap:
+      "❌ I speak the English."
+  },
+
+  {
+    id: 26,
+    category: "zero",
+    title: "School Subjects → No Article",
+    description:
+      "Names of academic subjects generally do not take an article.",
+    example:
+      "Mathematics is difficult.",
+    trap:
+      "❌ The Mathematics is difficult."
+  },
+
+  {
+    id: 27,
+    category: "zero",
+    title: "Sports → No Article",
+    description:
+      "Sports names generally do not take an article.",
+    example:
+      "He plays cricket.",
+    trap:
+      "❌ He plays the cricket."
+  },
+
+  {
+    id: 28,
+    category: "zero",
+    title: "Meals → Normally No Article",
+    description:
+      "Breakfast, lunch and dinner generally do not take an article when used generally.",
+    example:
+      "We had breakfast at 8 AM.",
+    trap:
+      "Specific meal can take the."
+  },
+
+  {
+    id: 29,
+    category: "zero",
+    title: "Abstract Noun in General Sense → No Article",
+    description:
+      "Abstract nouns used in a general sense usually take no article.",
+    example:
+      "Honesty is the best policy.",
+    trap:
+      "Specific honesty can take the."
+  },
+
+  {
+    id: 30,
+    category: "zero",
+    title: "Illness Names → Generally No Article",
+    description:
+      "Many disease names are used without an article.",
+    example:
+      "He has diabetes.",
+    trap:
+      "Disease-name usage depends on the expression."
+  },
+
+
+  // ================= EXAM TRAPS =================
+
+  {
+    id: 31,
+    category: "traps",
+    title: "A Number of vs The Number of",
+    description:
+      "A number of means several and takes a plural verb. The number of refers to the total and takes a singular verb.",
+    example:
+      "A number of students are absent. The number of students is increasing.",
+    trap:
+      "A number → plural verb; The number → singular verb."
+  },
+
+  {
+    id: 32,
+    category: "traps",
+    title: "A Few vs Few",
+    description:
+      "A few means some, while few means almost none.",
+    example:
+      "A few students passed the exam.",
+    trap:
+      "Meaning changes significantly."
+  },
+
+  {
+    id: 33,
+    category: "traps",
+    title: "A Little vs Little",
+    description:
+      "A little means some amount, while little means almost none.",
+    example:
+      "A little water is left.",
+    trap:
+      "Water is uncountable."
+  },
+
+
+  // ================= SPECIAL =================
+
+  {
+    id: 34,
+    category: "special",
+    title: "Musical Instruments → THE",
+    description:
+      "When talking about playing a musical instrument generally, use the.",
+    example:
+      "He plays the guitar.",
+    trap:
+      "the guitar, the piano, the violin."
+  },
+
+  {
+    id: 35,
+    category: "special",
+    title: "Famous Buildings / Monuments → THE",
+    description:
+      "Many famous monuments and buildings take the.",
+    example:
+      "The Taj Mahal is in Agra.",
+    trap:
+      "Specific famous structure → the."
+  },
+
+  {
+    id: 36,
+    category: "special",
+    title: "Newspapers → THE",
+    description:
+      "Names of many newspapers use the.",
+    example:
+      "I read The Times of India.",
+    trap:
+      "Newspaper names are commonly tested with the."
+  },
+
+  {
+    id: 37,
+    category: "special",
+    title: "Such + A/AN",
+    description:
+      "Use such + a/an + adjective + singular countable noun.",
+    example:
+      "It was such a difficult question.",
+    trap:
+      "Vowel sound → such an easy question."
+  },
+
+  {
+    id: 38,
+    category: "special",
+    title: "What + A/AN",
+    description:
+      "Exclamatory sentences with singular countable nouns use what + a/an.",
+    example:
+      "What a beautiful day!",
+    trap:
+      "Vowel sound → What an amazing performance!"
+  },
+
+  {
+    id: 39,
+    category: "special",
+    title: "Hotel / Museum Names → THE",
+    description:
+      "Many famous hotels and museums use the in their names.",
+    example:
+      "We visited the British Museum.",
+    trap:
+      "Learn the exact proper name when necessary."
+  },
+
+  {
+    id: 40,
+    category: "special",
+    title: "Sound Is More Important Than Spelling",
+    description:
+      "Article selection depends on pronunciation rather than simply whether the first letter is a vowel or consonant.",
+    example:
+      "an hour, a university, an MBA, a European.",
+    trap:
+      "Infosys ka favourite A vs An trap: spelling nahi, sound dekho."
+  }
+
+];
 
 /* ================================
    DOM ELEMENTS
@@ -3092,6 +3596,474 @@ document
     renderTenses();
 
   });
+
+
+  // =====================================================
+// ARTICLE TRACKER
+// =====================================================
+
+let articleProgress =
+  JSON.parse(localStorage.getItem("articleProgress")) || {};
+
+let articleBookmarks =
+  JSON.parse(localStorage.getItem("articleBookmarks")) || {};
+
+let showCompletedArticles = false;
+
+
+// Save
+function saveArticleData() {
+
+  localStorage.setItem(
+    "articleProgress",
+    JSON.stringify(articleProgress)
+  );
+
+  localStorage.setItem(
+    "articleBookmarks",
+    JSON.stringify(articleBookmarks)
+  );
+}
+
+
+// Category Name
+function getArticleCategoryName(category) {
+
+  const categories = {
+
+    "a-an": "A / AN",
+    "the": "THE",
+    "geography": "Geography",
+    "zero": "No Article",
+    "traps": "Exam Traps",
+    "special": "Special Rules"
+
+  };
+
+  return categories[category] || category;
+}
+
+
+// Render Articles
+function renderArticles() {
+
+  const container =
+    document.getElementById("articlesContainer");
+
+  if (!container) return;
+
+
+  const search =
+    document
+      .getElementById("articleSearch")
+      .value
+      .toLowerCase()
+      .trim();
+
+
+  const category =
+    document.getElementById("articleCategory").value;
+
+
+  const filteredRules =
+    articleRules.filter(rule => {
+
+      const matchesSearch =
+
+        rule.title
+          .toLowerCase()
+          .includes(search)
+
+        ||
+
+        rule.description
+          .toLowerCase()
+          .includes(search)
+
+        ||
+
+        rule.example
+          .toLowerCase()
+          .includes(search)
+
+        ||
+
+        rule.trap
+          .toLowerCase()
+          .includes(search);
+
+
+      const matchesCategory =
+        category === "all" ||
+        rule.category === category;
+
+
+      const matchesCompleted =
+        !showCompletedArticles ||
+        articleProgress[rule.id];
+
+
+      return (
+        matchesSearch &&
+        matchesCategory &&
+        matchesCompleted
+      );
+
+    });
+
+
+  if (filteredRules.length === 0) {
+
+    container.innerHTML = `
+
+      <div class="empty-state">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <h3>No rules found</h3>
+
+        <p>
+          Try another search or category.
+        </p>
+
+      </div>
+
+    `;
+
+    return;
+  }
+
+
+  container.innerHTML =
+    filteredRules
+      .map(rule => createArticleCard(rule))
+      .join("");
+}
+
+
+// Create Card
+function createArticleCard(rule) {
+
+  const isCompleted =
+    !!articleProgress[rule.id];
+
+  const isBookmarked =
+    !!articleBookmarks[rule.id];
+
+
+  return `
+
+    <div class="rule-card ${
+      isCompleted ? "completed" : ""
+    }">
+
+
+      <div class="rule-card-header">
+
+
+        <div class="rule-number">
+          ${rule.id}
+        </div>
+
+
+        <div class="rule-card-title">
+
+          <span class="rule-category">
+            ${getArticleCategoryName(rule.category)}
+          </span>
+
+          <h3>
+            ${rule.title}
+          </h3>
+
+        </div>
+
+
+        <div class="rule-actions">
+
+
+          <button
+            class="icon-btn ${
+              isBookmarked ? "active" : ""
+            }"
+            onclick="toggleArticleBookmark(${rule.id})"
+            title="Bookmark"
+          >
+
+            <i class="${
+              isBookmarked
+                ? "fa-solid"
+                : "fa-regular"
+            } fa-bookmark"></i>
+
+          </button>
+
+
+          <button
+            class="icon-btn"
+            onclick="copyArticle(${rule.id})"
+            title="Copy"
+          >
+
+            <i class="fa-regular fa-copy"></i>
+
+          </button>
+
+
+        </div>
+
+      </div>
+
+
+      <div class="rule-content">
+
+
+        <p class="rule-description">
+          ${rule.description}
+        </p>
+
+
+        <div class="rule-example">
+
+          <div class="example-label">
+
+            <i class="fa-solid fa-code"></i>
+
+            Example
+
+          </div>
+
+          <p>
+            ${rule.example}
+          </p>
+
+        </div>
+
+
+        <div class="rule-trap">
+
+          <div class="trap-label">
+
+            <i class="fa-solid fa-triangle-exclamation"></i>
+
+            Infosys Trap
+
+          </div>
+
+          <p>
+            ${rule.trap}
+          </p>
+
+        </div>
+
+
+        <button
+          class="complete-btn ${
+            isCompleted ? "completed" : ""
+          }"
+          onclick="toggleArticleComplete(${rule.id})"
+        >
+
+          <i class="fa-solid ${
+            isCompleted
+              ? "fa-circle-check"
+              : "fa-check"
+          }"></i>
+
+
+          ${
+            isCompleted
+              ? "Completed"
+              : "Mark as Completed"
+          }
+
+        </button>
+
+
+      </div>
+
+    </div>
+
+  `;
+}
+
+
+// Toggle Complete
+function toggleArticleComplete(id) {
+
+  if (articleProgress[id]) {
+
+    delete articleProgress[id];
+
+  } else {
+
+    articleProgress[id] = true;
+
+  }
+
+
+  saveArticleData();
+
+  renderArticles();
+
+  updateArticleProgress();
+
+  updateDashboard();
+}
+
+
+// Toggle Bookmark
+function toggleArticleBookmark(id) {
+
+  if (articleBookmarks[id]) {
+
+    delete articleBookmarks[id];
+
+  } else {
+
+    articleBookmarks[id] = true;
+
+  }
+
+
+  saveArticleData();
+
+  renderArticles();
+}
+
+
+// Copy
+function copyArticle(id) {
+
+  const rule =
+    articleRules.find(item => item.id === id);
+
+  if (!rule) return;
+
+
+  const text = `
+
+ARTICLE RULE #${rule.id}
+
+${rule.title}
+
+${rule.description}
+
+Example:
+${rule.example}
+
+Infosys Trap:
+${rule.trap}
+
+  `.trim();
+
+
+  navigator.clipboard
+    .writeText(text)
+    .then(() => {
+
+      alert("Article rule copied!");
+
+    })
+    .catch(() => {
+
+      alert("Unable to copy rule.");
+
+    });
+}
+
+
+// Progress
+function updateArticleProgress() {
+
+  const completed =
+    Object.keys(articleProgress).length;
+
+  const total =
+    articleRules.length;
+
+
+  const percentage =
+    total === 0
+      ? 0
+      : Math.round(
+          (completed / total) * 100
+        );
+
+
+  const progressText =
+    document.getElementById(
+      "articleProgressText"
+    );
+
+
+  const progressBar =
+    document.getElementById(
+      "articleProgressBar"
+    );
+
+
+  if (progressText) {
+
+    progressText.textContent =
+      `${completed} / ${total} completed`;
+
+  }
+
+
+  if (progressBar) {
+
+    progressBar.style.width =
+      `${percentage}%`;
+
+  }
+}
+
+
+// Search
+document
+  .getElementById("articleSearch")
+  ?.addEventListener(
+    "input",
+    renderArticles
+  );
+
+
+// Category
+document
+  .getElementById("articleCategory")
+  ?.addEventListener(
+    "change",
+    renderArticles
+  );
+
+
+// Completed Filter
+document
+  .getElementById("articleCompletedBtn")
+  ?.addEventListener(
+    "click",
+    function () {
+
+      showCompletedArticles =
+        !showCompletedArticles;
+
+
+      this.classList.toggle(
+        "active",
+        showCompletedArticles
+      );
+
+
+      renderArticles();
+
+    }
+  );
+
+
+// Initial Render
+renderArticles();
+updateArticleProgress();
 
 
 // Initial Render

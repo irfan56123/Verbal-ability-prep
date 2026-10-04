@@ -1909,3 +1909,1200 @@ body.dark #tenses .rule-category {
   }
 
 }
+
+/* =====================================================
+   ARTICLES SECTION
+   ===================================================== */
+
+#articles {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 70px 24px;
+  box-sizing: border-box;
+}
+
+
+/* Header */
+
+#articles .section-header {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  gap: 30px;
+
+  margin-bottom: 30px;
+
+}
+
+
+#articles .section-header h2 {
+
+  margin: 8px 0 10px;
+
+  font-size: 32px;
+
+  font-weight: 800;
+
+  line-height: 1.2;
+
+}
+
+
+#articles .section-header p {
+
+  margin: 0;
+
+  font-size: 15px;
+
+  line-height: 1.6;
+
+  opacity: 0.75;
+
+}
+
+
+#articles .section-badge {
+
+  display: inline-flex;
+
+  padding: 5px 10px;
+
+  border-radius: 6px;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: .5px;
+
+}
+
+
+/* Progress */
+
+#articles .section-progress {
+
+  min-width: 180px;
+
+}
+
+
+#articles #articleProgressText {
+
+  display: block;
+
+  margin-bottom: 8px;
+
+  text-align: right;
+
+  font-size: 13px;
+
+  opacity: .75;
+
+}
+
+
+#articles .progress-bar {
+
+  width: 180px;
+
+  height: 7px;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+
+}
+
+
+#articles #articleProgressBar {
+
+  width: 0%;
+
+  height: 100%;
+
+  border-radius: inherit;
+
+  transition: width .3s ease;
+
+}
+
+
+/* Controls */
+
+#articles .rule-controls {
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(250px, 1fr)
+    220px
+    auto;
+
+  gap: 12px;
+
+  align-items: center;
+
+  margin-bottom: 28px;
+
+}
+
+
+#articles .search-box {
+
+  position: relative;
+
+  width: 100%;
+
+}
+
+
+#articles .search-box i {
+
+  position: absolute;
+
+  left: 16px;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  opacity: .6;
+
+}
+
+
+#articles .search-box input {
+
+  width: 100%;
+
+  height: 46px;
+
+  padding:
+    0 16px 0 44px;
+
+  border: 1px solid #dce2ea;
+
+  border-radius: 10px;
+
+  outline: none;
+
+  font-size: 14px;
+
+  box-sizing: border-box;
+
+}
+
+
+#articles #articleCategory {
+
+  width: 100%;
+
+  height: 46px;
+
+  padding: 0 14px;
+
+  border: 1px solid #dce2ea;
+
+  border-radius: 10px;
+
+  background: white;
+
+  font-size: 14px;
+
+  outline: none;
+
+}
+
+
+#articles .filter-btn {
+
+  height: 46px;
+
+  padding: 0 18px;
+
+  border: 1px solid #dce2ea;
+
+  border-radius: 10px;
+
+  background: white;
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+}
+
+
+#articles .filter-btn.active {
+
+  background: #6366f1;
+
+  color: white;
+
+  border-color: #6366f1;
+
+}
+
+
+/* Grid */
+
+#articles .rules-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 20px;
+
+}
+
+
+/* Card */
+
+#articles .rule-card {
+
+  display: flex;
+
+  flex-direction: column;
+
+  min-width: 0;
+
+  background: white;
+
+  border: 1px solid #dfe4ec;
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  transition: .2s ease;
+
+}
+
+
+#articles .rule-card:hover {
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.07);
+
+}
+
+
+#articles .rule-card.completed {
+
+  border-color: #a7f3d0;
+
+}
+
+
+/* Header */
+
+#articles .rule-card-header {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 14px;
+
+  padding:
+    20px 20px 10px;
+
+}
+
+
+#articles .rule-number {
+
+  flex: 0 0 36px;
+
+  width: 36px;
+
+  height: 36px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #eef0ff;
+
+  color: #4f46e5;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+}
+
+
+#articles .rule-card-title {
+
+  flex: 1;
+
+  min-width: 0;
+
+}
+
+
+#articles .rule-card-title h3 {
+
+  margin: 7px 0 0;
+
+  font-size: 17px;
+
+  line-height: 1.4;
+
+}
+
+
+#articles .rule-category {
+
+  display: inline-flex;
+
+  padding: 4px 8px;
+
+  border-radius: 5px;
+
+  background: #f0f4f8;
+
+  color: #526579;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+}
+
+
+/* Actions */
+
+#articles .rule-actions {
+
+  display: flex;
+
+  gap: 7px;
+
+}
+
+
+#articles .icon-btn {
+
+  width: 38px;
+
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 1px solid #dce2ea;
+
+  border-radius: 9px;
+
+  background: white;
+
+  cursor: pointer;
+
+}
+
+
+#articles .icon-btn.active {
+
+  color: #6366f1;
+
+  border-color: #6366f1;
+
+  background: #f4f3ff;
+
+}
+
+
+/* Content */
+
+#articles .rule-content {
+
+  padding:
+    5px 20px 20px;
+
+}
+
+
+#articles .rule-description {
+
+  margin:
+    0 0 18px;
+
+  color: #53657a;
+
+  font-size: 14px;
+
+  line-height: 1.65;
+
+}
+
+
+/* Example */
+
+#articles .rule-example {
+
+  padding: 14px 15px;
+
+  margin-bottom: 12px;
+
+  border-radius: 10px;
+
+  background: #f7f8ff;
+
+  border: 1px solid #e6e8ff;
+
+}
+
+
+#articles .example-label {
+
+  margin-bottom: 7px;
+
+  color: #4f46e5;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+}
+
+
+#articles .rule-example p {
+
+  margin: 0;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  line-height: 1.5;
+
+}
+
+
+/* Trap */
+
+#articles .rule-trap {
+
+  padding: 14px 15px;
+
+  margin-bottom: 16px;
+
+  border-radius: 10px;
+
+  background: #fff8ed;
+
+  border: 1px solid #f7dfb5;
+
+}
+
+
+#articles .trap-label {
+
+  margin-bottom: 7px;
+
+  font-size: 12px;
+
+  font-weight: 750;
+
+}
+
+
+#articles .rule-trap p {
+
+  margin: 0;
+
+  font-size: 13px;
+
+  line-height: 1.55;
+
+}
+
+
+/* Complete */
+
+#articles .complete-btn {
+
+  width: 100%;
+
+  height: 42px;
+
+  border: 1px solid #dce2ea;
+
+  border-radius: 9px;
+
+  background: white;
+
+  color: #53657a;
+
+  font-size: 13px;
+
+  font-weight: 650;
+
+  cursor: pointer;
+
+}
+
+
+#articles .complete-btn.completed {
+
+  background: #ecfdf5;
+
+  color: #047857;
+
+  border-color: #a7f3d0;
+
+}
+
+
+/* Empty */
+
+#articles .empty-state {
+
+  grid-column: 1 / -1;
+
+  padding: 60px 20px;
+
+  text-align: center;
+
+  border: 1px dashed #d5dbe5;
+
+  border-radius: 16px;
+
+}
+
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+
+  #articles .rules-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  #articles .rule-controls {
+
+    grid-template-columns: 1fr 1fr;
+
+  }
+
+  #articles .search-box {
+
+    grid-column: 1 / -1;
+
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  #articles {
+
+    padding: 45px 15px;
+
+  }
+
+  #articles .section-header {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+  }
+
+  #articles .section-progress {
+
+    width: 100%;
+
+  }
+
+  #articles #articleProgressText {
+
+    text-align: left;
+
+  }
+
+  #articles .progress-bar {
+
+    width: 100%;
+
+  }
+
+  #articles .rule-controls {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  #articles .search-box {
+
+    grid-column: auto;
+
+  }
+
+  #articles .rule-card-header {
+
+    padding:
+      16px 15px 8px;
+
+  }
+
+  #articles .rule-content {
+
+    padding:
+      5px 15px 15px;
+
+  }
+
+}
+
+
+@media (max-width: 450px) {
+
+  #articles .rule-card-header {
+
+    flex-wrap: wrap;
+
+  }
+
+  #articles .rule-actions {
+
+    width: 100%;
+
+    margin-left: 50px;
+
+  }
+
+}
+
+
+/* =====================================================
+   ARTICLES — MATCH SVA CARD DESIGN
+   ===================================================== */
+
+#articles {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 24px;
+  box-sizing: border-box;
+}
+
+
+/* ================= HEADER ================= */
+
+#articles .section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+#articles .section-header h2 {
+  margin: 8px 0 10px;
+  font-size: 32px;
+  font-weight: 800;
+}
+
+#articles .section-header p {
+  margin: 0;
+  color: #526579;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+#articles .section-badge {
+  display: inline-flex;
+  padding: 5px 10px;
+  border-radius: 6px;
+  background: #eef2f6;
+  color: #526579;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .5px;
+}
+
+
+/* ================= PROGRESS ================= */
+
+#articles .section-progress {
+  min-width: 180px;
+}
+
+#articles #articleProgressText {
+  display: block;
+  margin-bottom: 8px;
+  text-align: right;
+  color: #526579;
+  font-size: 13px;
+}
+
+#articles .progress-bar {
+  width: 180px;
+  height: 7px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #e9edf3;
+}
+
+#articles #articleProgressBar {
+  width: 0%;
+  height: 100%;
+  border-radius: inherit;
+  background: #4f46e5;
+  transition: width .3s ease;
+}
+
+
+/* ================= SEARCH ================= */
+
+#articles .rule-controls {
+  display: grid;
+  grid-template-columns: minmax(250px, 1fr) 220px auto;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+#articles .search-box {
+  position: relative;
+  width: 100%;
+}
+
+#articles .search-box i {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #526579;
+}
+
+#articles .search-box input {
+  width: 100%;
+  height: 46px;
+  padding: 0 16px 0 44px;
+  border: 1px solid #d8e0e9;
+  border-radius: 10px;
+  background: #fff;
+  outline: none;
+  color: #111827;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+#articles .search-box input:focus {
+  border-color: #6366f1;
+}
+
+
+/* ================= FILTER ================= */
+
+#articles #articleCategory {
+  width: 100%;
+  height: 46px;
+  padding: 0 14px;
+  border: 1px solid #d8e0e9;
+  border-radius: 10px;
+  background: #fff;
+  color: #111827;
+  font-size: 14px;
+  outline: none;
+}
+
+#articles .filter-btn {
+  height: 46px;
+  padding: 0 18px;
+  border: 1px solid #d8e0e9;
+  border-radius: 10px;
+  background: #fff;
+  color: #526579;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#articles .filter-btn:hover,
+#articles .filter-btn.active {
+  border-color: #6366f1;
+  color: #4f46e5;
+}
+
+
+/* ================= GRID ================= */
+
+#articles .rules-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+
+/* ================= CARD ================= */
+
+#articles .rule-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: #ffffff;
+  border: 1px solid #dce3eb;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: .2s ease;
+}
+
+#articles .rule-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, .06);
+}
+
+
+/* ================= COMPLETED CARD ================= */
+
+#articles .rule-card.completed {
+  border-color: #72dcae;
+  background: #ffffff;
+}
+
+
+/* ================= CARD HEADER ================= */
+
+#articles .rule-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 22px 22px 8px;
+}
+
+
+/* Number */
+
+#articles .rule-number {
+  flex: 0 0 36px;
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #eef0ff;
+  color: #4f46e5;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+
+/* Completed Number */
+
+#articles .rule-card.completed .rule-number {
+  background: #d3fae8;
+  color: #00a86b;
+  font-size: 0;
+}
+
+#articles .rule-card.completed .rule-number::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 13px;
+}
+
+
+/* ================= TITLE ================= */
+
+#articles .rule-card-title {
+  flex: 1;
+  min-width: 0;
+}
+
+#articles .rule-card-title h3 {
+  margin: 7px 0 0;
+  color: #07111f;
+  font-size: 17px;
+  line-height: 1.45;
+  font-weight: 750;
+}
+
+
+/* ================= CATEGORY ================= */
+
+#articles .rule-category {
+  display: inline-flex;
+  padding: 4px 8px;
+
+  border-radius: 5px;
+
+  background: #eef3f7;
+  color: #526579;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .4px;
+  text-transform: uppercase;
+}
+
+
+/* ================= ACTION BUTTONS ================= */
+
+#articles .rule-actions {
+  display: flex;
+  gap: 7px;
+}
+
+#articles .icon-btn {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #d8e0e9;
+  border-radius: 9px;
+
+  background: #ffffff;
+  color: #526579;
+
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+#articles .icon-btn:hover {
+  color: #4f46e5;
+  border-color: #c9cef9;
+}
+
+#articles .icon-btn.active {
+  color: #64748b;
+  background: #f2f6f9;
+  border-color: #e2e8f0;
+}
+
+
+/* ================= CONTENT ================= */
+
+#articles .rule-content {
+  padding: 5px 22px 20px;
+}
+
+#articles .rule-description {
+  margin: 0 0 18px;
+
+  color: #536b83;
+
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+
+/* ================= EXAMPLE BOX ================= */
+
+#articles .rule-example {
+  margin-bottom: 12px;
+  padding: 14px 15px;
+
+  border-left: 3px solid #4f46ff;
+  border-radius: 10px;
+
+  background: #f0f5f9;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+}
+
+#articles .example-label {
+  margin-bottom: 7px;
+
+  color: #4f46ff;
+
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+#articles .rule-example p {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+
+/* ================= INFOSYS TRAP ================= */
+
+#articles .rule-trap {
+  margin-bottom: 16px;
+  padding: 4px 0;
+
+  border: none;
+  background: transparent;
+}
+
+#articles .trap-label {
+  margin-bottom: 5px;
+
+  color: #111827;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+#articles .trap-label i {
+  color: #ff0000;
+}
+
+#articles .rule-trap p {
+  margin: 0;
+
+  color: #ff0000;
+
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+
+/* ================= COMPLETE BUTTON ================= */
+
+#articles .complete-btn {
+  width: 100%;
+  height: 34px;
+
+  border: 1px solid #d8e0e9;
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: #526579;
+
+  font-size: 12px;
+  font-weight: 650;
+
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+#articles .complete-btn:hover {
+  border-color: #72dcae;
+  color: #00a86b;
+}
+
+
+/* COMPLETED BUTTON */
+
+#articles .complete-btn.completed {
+  background: #d3fae8;
+  color: #00a86b;
+  border-color: #72dcae;
+}
+
+
+/* ================= EMPTY STATE ================= */
+
+#articles .empty-state {
+  grid-column: 1 / -1;
+
+  padding: 60px 20px;
+
+  text-align: center;
+
+  border: 1px dashed #d5dbe5;
+  border-radius: 16px;
+
+  background: #ffffff;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1000px) {
+
+  #articles .rules-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #articles .rule-controls {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #articles .search-box {
+    grid-column: 1 / -1;
+  }
+}
+
+
+@media (max-width: 700px) {
+
+  #articles {
+    padding: 45px 15px;
+  }
+
+  #articles .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #articles .section-progress {
+    width: 100%;
+  }
+
+  #articles #articleProgressText {
+    text-align: left;
+  }
+
+  #articles .progress-bar {
+    width: 100%;
+  }
+
+  #articles .rule-controls {
+    grid-template-columns: 1fr;
+  }
+
+  #articles .search-box {
+    grid-column: auto;
+  }
+}
+
+
+@media (max-width: 450px) {
+
+  #articles .rule-card-header {
+    flex-wrap: wrap;
+  }
+
+  #articles .rule-actions {
+    width: 100%;
+    margin-left: 50px;
+  }
+}

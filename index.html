@@ -65,6 +65,10 @@
   <i class="fa-solid fa-clock"></i>
   Tenses
 </a>
+<a href="#articles" class="nav-link">
+  <i class="fa-solid fa-font"></i>
+  Articles
+</a>
 
       <a href="#vocabulary" class="nav-link">
         <i class="fa-solid fa-language"></i>
@@ -117,6 +121,10 @@
 <a href="#tenses">
   <i class="fa-solid fa-clock"></i>
   Tenses
+</a>
+<a href="#articles">
+  <i class="fa-solid fa-font"></i>
+  Articles
 </a>
     <a href="#vocabulary">Vocabulary</a>
     <a href="#reading">Reading Comprehension</a>
@@ -501,6 +509,110 @@
 
   <!-- Tense Rules -->
   <div id="tensesContainer" class="rules-grid"></div>
+
+</section>
+
+<!-- ================= ARTICLES ================= -->
+<section id="articles" class="topic-section">
+
+  <div class="section-header">
+
+    <div>
+      <span class="section-badge">GRAMMAR</span>
+
+      <h2>Articles</h2>
+
+      <p>
+        Infosys System Engineer focused article rules
+        for MCQs, fill-in-the-blanks and error detection.
+      </p>
+    </div>
+
+    <div class="section-progress">
+
+      <span id="articleProgressText">
+        0 / 40 completed
+      </span>
+
+      <div class="progress-bar">
+        <div id="articleProgressBar"></div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- Search + Filters -->
+
+  <div class="rule-controls">
+
+    <div class="search-box">
+
+      <i class="fa-solid fa-magnifying-glass"></i>
+
+      <input
+        type="text"
+        id="articleSearch"
+        placeholder="Search article rules..."
+      />
+
+    </div>
+
+
+    <select id="articleCategory">
+
+      <option value="all">
+        All Categories
+      </option>
+
+      <option value="a-an">
+        A / An
+      </option>
+
+      <option value="the">
+        The
+      </option>
+
+      <option value="geography">
+        Geography
+      </option>
+
+      <option value="zero">
+        No Article
+      </option>
+
+      <option value="traps">
+        Exam Traps
+      </option>
+
+      <option value="special">
+        Special Rules
+      </option>
+
+    </select>
+
+
+    <button
+      id="articleCompletedBtn"
+      class="filter-btn"
+    >
+
+      <i class="fa-solid fa-check"></i>
+
+      Completed
+
+    </button>
+
+  </div>
+
+
+  <!-- Articles Rules -->
+
+  <div
+    id="articlesContainer"
+    class="rules-grid"
+  ></div>
 
 </section>
     <!-- ================= VOCABULARY ================= -->
